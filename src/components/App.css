@@ -71,7 +71,7 @@ input:focus {
   display: block;
   width: 32px;
   height: 32px;
-  background: #5fbcd3 url('pictures/swap.svg') center no-repeat;
+  background: #5fbcd3 url('../swap.svg') center no-repeat;
   background-size: 32px 32px;
   transform: rotate(90deg);
   cursor: pointer;
