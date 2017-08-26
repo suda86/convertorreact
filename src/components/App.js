@@ -277,27 +277,30 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div>
-          <h1 className="header">CURRENCY CONVERTOR</h1>
-          <div className="left">
-            <select value={this.state.first} ref="first" onChange={this.onFirstChange.bind(this)} >
-              {renderOptions.bind(this)(this.state.second)}
-            </select>
-            <input ref="firstInput" type="text" style={{color: this.state.firstInputError === 'please enter a number' ? "red" : "black"}} value={this.state.firstInput} onChange={this.onFirstInputChange.bind(this)} />
+        <h1 className="header">CURRENCY CONVERTOR</h1>
+        <div className="container">
+          
+          <div className="form-container">
+            <div className="form">
+              <select value={this.state.first} ref="first" onChange={this.onFirstChange.bind(this)} >
+                {renderOptions.bind(this)(this.state.second)}
+              </select>
+              <input ref="firstInput" type="text" style={{color: this.state.firstInputError === 'please enter a number' ? "red" : "black"}} value={this.state.firstInput} onChange={this.onFirstInputChange.bind(this)} />
+            </div>
             <div className="error">{this.state.firstInputError}</div>
           </div>
           <div className="swap" onClick={this.onSwapClick.bind(this)}></div>
-          <div className="right">
-            <select value={this.state.second} ref="second" onChange={this.onSecondChange.bind(this)} >
-              {renderOptions.bind(this)(this.state.first)}
-            </select>
-            <input ref="secondInput" type="text" style={{color: this.state.secondInputError === 'please enter a number' ? "red" : "black"}} value={this.state.secondInput} onChange={this.onSecondInputChange.bind(this)} />
-            <br />
+          <div className="form-container">
+            <div>
+              <select value={this.state.second} ref="second" onChange={this.onSecondChange.bind(this)} >
+                {renderOptions.bind(this)(this.state.first)}
+              </select>
+              <input ref="secondInput" type="text" style={{color: this.state.secondInputError === 'please enter a number' ? "red" : "black"}} value={this.state.secondInput} onChange={this.onSecondInputChange.bind(this)} />
+            </div>
             <div className="error">{this.state.secondInputError}</div>
           </div>
-          <br />
-          <div className="reset" onClick={this.onResetButtonClick.bind(this)}>Reset</div>
         </div>
+         <div className="reset" onClick={this.onResetButtonClick.bind(this)}>Reset</div>
       </div>
     );
   }
