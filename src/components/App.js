@@ -291,7 +291,7 @@ class App extends Component {
           </div>
           <div className="swap" onClick={this.onSwapClick.bind(this)}></div>
           <div className="form-container">
-            <div>
+            <div className="form">
               <select value={this.state.second} ref="second" onChange={this.onSecondChange.bind(this)} >
                 {renderOptions.bind(this)(this.state.first)}
               </select>
