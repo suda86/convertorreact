@@ -276,7 +276,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className="app">
         <h1 className="header">CURRENCY CONVERTOR</h1>
         <div className="container">
           
